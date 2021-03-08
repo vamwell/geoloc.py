@@ -13,6 +13,7 @@ print("Enter IP Below (example: 1.1.1.1)\nOr Leave Empty To Geolocate Your IP.")
 ip = input(">> ")
 clear()
 r = requests.get("http://ip-api.com/json/" + ip + "?fields=1245183")
+# I know this is ugly, but it works.
 print("IP:           " + r.json()['query'])
 print("Continent:    " + r.json()['continent'])
 print("Country:      " + r.json()['country'])
